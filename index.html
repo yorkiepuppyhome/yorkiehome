@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://www.royalyorkies.com/">
     <meta property="og:title" content="Royal Yorkies | Premium Yorkshire Terrier Puppies">
     <meta property="og:description" content="Discover your perfect Yorkie companion. Ethically bred luxury puppies with health guarantees and global delivery to your doorstep.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&h=630&fit=crop">
+    <meta property="og:image" content="https://dogtime.com/wp-content/uploads/sites/12/2023/07/GettyImages-1483288610-e1689900335910.jpg">
     <meta property="og:site_name" content="Royal Yorkies">
     <meta property="og:locale" content="en_US">
     
@@ -27,7 +27,7 @@
     <meta property="twitter:url" content="https://www.royalyorkies.com/">
     <meta property="twitter:title" content="Royal Yorkies | Premium Yorkshire Terrier Puppies">
     <meta property="twitter:description" content="Discover your perfect Yorkie companion. Ethically bred luxury puppies with health guarantees and global delivery.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&h=630&fit=crop">
+    <meta property="twitter:image" content="https://dogtime.com/wp-content/uploads/sites/12/2023/07/GettyImages-1483288610-e1689900335910.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.royalyorkies.com/">
@@ -137,7 +137,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Royal Yorkies",
-        "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&h=600&fit=crop",
+        "image": "https://dogtime.com/wp-content/uploads/sites/12/2023/07/GettyImages-1483288610-e1689900335910.jpg",
         "@id": "https://www.royalyorkies.com",
         "url": "https://www.royalyorkies.com",
         "telephone": "+1-234-567-890",
@@ -415,7 +415,7 @@
             display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 24px;
         }
-    
+        
         .gallery-item {
             position: relative; border-radius: 20px; overflow: hidden;
             box-shadow: 0 10px 30px -5px rgba(0,0,0,0.1);
@@ -476,1125 +476,1620 @@
             width: 56px; height: 56px; border-radius: 50%;
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-            cursor: pointer; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
+            cursor: pointer; transition: all 0.3s ease;
             border: 3px solid rgba(255,255,255,0.3);
+            text-decoration: none;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+        }
+        
+        /* Puppy Card Styles */
+        .puppy-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .puppy-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 60px -15px rgba(0,0,0,0.15);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .puppy-card .puppy-img {
+            height: 280px;
+            object-fit: cover;
+            width: 100%;
+            transition: transform 0.6s ease;
+        }
+        
+        .puppy-card:hover .puppy-img {
+            transform: scale(1.05);
+        }
+        
+        /* Service Card */
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.4s ease;
             position: relative;
+            overflow: hidden;
         }
         
-        .whatsapp-btn:hover { transform: scale(1.1) rotate(-5deg); }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #8b4513);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
         
-        .whatsapp-btn::after {
-            content: 'Chat on WhatsApp'; position: absolute;
-            left: 70px; top: 50%; transform: translateY(-50%);
-            background: #25D366; color: white;
-            padding: 8px 16px; border-radius: 20px;
-            font-size: 12px; font-weight: 600;
-            white-space: nowrap; opacity: 0; pointer-events: none;
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px -10px rgba(0,0,0,0.1);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Testimonial Card */
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            transition: all 0.4s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px -10px rgba(0,0,0,0.12);
+        }
+        
+        /* Process Step */
+        .process-step {
+            position: relative;
+            text-align: center;
+        }
+        
+        .process-step-number {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+            color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px; font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Form Styles */
+        .form-input {
+            width: 100%;
+            padding: 14px 20px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            background: white;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            outline: none;
         }
         
-        .whatsapp-btn:hover::after { opacity: 1; left: 75px; }
-        
-        /* Status Indicator */
-        .status-online {
-            width: 10px; height: 10px; background: #25D366;
-            border-radius: 50%; position: relative;
-            border: 2px solid white;
+        .form-input:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
         }
         
-        .status-online::after {
-            content: ''; position: absolute; inset: -4px;
-            border-radius: 50%; border: 2px solid #25D366;
-            animation: statusPulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes statusPulse {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(2); opacity: 0; }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4a0404;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         /* Lightbox */
         .lightbox {
-            position: fixed; inset: 0; z-index: 10002;
-            background: rgba(0,0,0,0.92); backdrop-filter: blur(10px);
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 10000;
             display: flex; align-items: center; justify-content: center;
-            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.4s ease;
         }
         
-        .lightbox.active { opacity: 1; pointer-events: all; }
+        .lightbox.active {
+            opacity: 1; pointer-events: all;
+        }
         
         .lightbox img {
             max-width: 90%; max-height: 90%;
-            border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-            transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
         
-        .lightbox.active img { transform: scale(1); }
-        
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+        /* Navigation */
+        .nav-link {
+            position: relative;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: 500;
+            color: #4a0404;
+            transition: color 0.3s ease;
         }
         
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        .animate-float-delayed { animation: float 6s ease-in-out 3s infinite; }
-        
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .5; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: linear-gradient(90deg, #d4af37, #8b4513);
+            transition: width 0.3s ease;
         }
         
-        .animate-pulse-slow { animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        
-        ::selection { background-color: #d4af37; color: white; }
-        
-        @media (max-width: 768px) {
-            .cursor-dot, .cursor-outline { display: none !important; }
-            .chat-window { width: calc(100vw - 48px); right: -12px; }
-            .take-me-home { bottom: 80px; }
-            .gallery-grid { grid-template-columns: 1fr; }
+        .nav-link:hover::after {
+            width: 100%;
         }
         
-        @media print { .no-print { display: none !important; } }
+        /* Section Divider */
+        .section-divider {
+            width: 80px; height: 4px;
+            background: linear-gradient(90deg, #d4af37, #8b4513);
+            border-radius: 2px;
+            margin: 20px auto;
+        }
+        
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .badge-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+            color: white;
+        }
+        
+        .badge-outline {
+            border: 2px solid #d4af37;
+            color: #d4af37;
+        }
+        
+        /* Counter Animation */
+        .counter-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #d4af37;
+            line-height: 1;
+        }
+        
+        /* Smooth reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-royal-50 overflow-x-hidden selection:bg-gold-400 selection:text-white">
-
-    <!-- Loading Screen -->
-    <div id="loader">
-        <div class="paw-loader">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" class="w-full h-full">
-                <path d="M12 12c-2 0-3.5-1.5-3.5-3.5S10 5 12 5s3.5 1.5 3.5 3.5S14 12 12 12z"/>
-                <path d="M7 14c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z"/>
-                <path d="M17 14c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z"/>
-                <path d="M5 18c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z"/>
-                <path d="M19 18c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z"/>
-            </svg>
-        </div>
-        <p class="mt-4 font-serif text-royal-800 text-lg tracking-widest animate-pulse">ROYAL YORKIES</p>
-    </div>
+<body class="font-sans text-gray-800 bg-royal-50 paw-bg overflow-x-hidden">
 
     <!-- Custom Cursor -->
     <div class="cursor-dot hidden md:block"></div>
     <div class="cursor-outline hidden md:block"></div>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 top-0">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-royal-800 flex items-center justify-center text-white text-lg shadow-lg group-hover:scale-110 transition-transform">
-                        🐾
-                    </div>
-                    <span class="font-serif text-2xl font-bold text-royal-900 tracking-wide">Royal Yorkies</span>
-                </a>
-                
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#home" class="text-sm font-medium text-royal-800 hover:text-gold-500 transition-colors tracking-wide uppercase">Home</a>
-                    <a href="#about" class="text-sm font-medium text-royal-800 hover:text-gold-500 transition-colors tracking-wide uppercase">About</a>
-                    <a href="#puppies" class="text-sm font-medium text-royal-800 hover:text-gold-500 transition-colors tracking-wide uppercase">Our Puppies</a>
-                    <a href="#gallery" class="text-sm font-medium text-royal-800 hover:text-gold-500 transition-colors tracking-wide uppercase">Gallery</a>
-                    <a href="#shipping" class="text-sm font-medium text-royal-800 hover:text-gold-500 transition-colors tracking-wide uppercase">Shipping</a>
-                    <a href="#contact" class="text-sm font-medium text-royal-800 hover:text-gold-500 transition-colors tracking-wide uppercase">Contact</a>
-                </div>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="paw-loader text-6xl mb-4">🐾</div>
+        <h2 class="font-serif text-2xl text-royal-900 tracking-widest uppercase">Royal Yorkies</h2>
+        <p class="text-sm text-royal-600 mt-2 font-light tracking-widest">Loading Excellence...</p>
+    </div>
 
-                <button class="md:hidden text-royal-900" onclick="toggleMobileMenu()">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
+    <!-- Welcome Popup -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="welcome-popup" id="welcomePopup">
+        <div class="relative z-10">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-full overflow-hidden border-4 border-gold-400 shadow-lg">
+                <img src="https://dogtime.com/wp-content/uploads/sites/12/2023/07/GettyImages-1483288610-e1689900335910.jpg" alt="Royal Yorkie" class="w-full h-full object-cover">
             </div>
+            <h3 class="font-serif text-3xl text-royal-900 mb-3">Welcome to Royal Yorkies</h3>
+            <p class="text-royal-600 mb-6 leading-relaxed">Discover your perfect Yorkshire Terrier companion. We ethically breed premium AKC-registered puppies with worldwide delivery.</p>
+            <div class="flex gap-3 justify-center">
+                <button onclick="closeWelcomePopup()" class="bg-gradient-to-r from-gold-400 to-gold-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all hover:scale-105">Explore Puppies</button>
+                <button onclick="closeWelcomePopup(); openChat()" class="border-2 border-gold-400 text-gold-500 px-8 py-3 rounded-full font-semibold hover:bg-gold-50 transition-all">Chat With Us</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white text-lg shadow-lg group-hover:scale-110 transition-transform">🐾</div>
+                <div>
+                    <h1 class="font-serif text-xl font-bold text-royal-900 tracking-wide">ROYAL YORKIES</h1>
+                    <p class="text-[10px] text-gold-500 tracking-[0.3em] uppercase font-semibold">Est. 2009</p>
+                </div>
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#puppies" class="nav-link">Our Puppies</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+1234567890" class="flex items-center gap-2 text-royal-900 font-semibold text-sm hover:text-gold-500 transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    +44 7951 892125
+                </a>
+                <a href="#contact" class="bg-gradient-to-r from-gold-400 to-gold-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:scale-105 transition-all">
+                    Reserve Now
+                </a>
+            </div>
+            
+            <button id="mobileMenuBtn" class="lg:hidden text-royal-900 p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-royal-100">
-            <div class="px-6 py-4 space-y-3">
-                <a href="#home" class="block text-royal-800 font-medium py-2">Home</a>
-                <a href="#about" class="block text-royal-800 font-medium py-2">About</a>
-                <a href="#puppies" class="block text-royal-800 font-medium py-2">Our Puppies</a>
-                <a href="#gallery" class="block text-royal-800 font-medium py-2">Gallery</a>
-                <a href="#shipping" class="block text-royal-800 font-medium py-2">Shipping</a>
-                <a href="#contact" class="block text-royal-800 font-medium py-2">Contact</a>
+        <div id="mobileMenu" class="lg:hidden hidden bg-white/95 backdrop-blur-lg border-t border-royal-100">
+            <div class="px-6 py-4 flex flex-col gap-4">
+                <a href="#home" class="text-royal-900 font-medium py-2 border-b border-royal-50">Home</a>
+                <a href="#about" class="text-royal-900 font-medium py-2 border-b border-royal-50">About</a>
+                <a href="#puppies" class="text-royal-900 font-medium py-2 border-b border-royal-50">Our Puppies</a>
+                <a href="#services" class="text-royal-900 font-medium py-2 border-b border-royal-50">Services</a>
+                <a href="#gallery" class="text-royal-900 font-medium py-2 border-b border-royal-50">Gallery</a>
+                <a href="#process" class="text-royal-900 font-medium py-2 border-b border-royal-50">Process</a>
+                <a href="#testimonials" class="text-royal-900 font-medium py-2 border-b border-royal-50">Reviews</a>
+                <a href="#contact" class="text-royal-900 font-medium py-2">Contact</a>
+                <a href="tel:+1234567890" class="flex items-center gap-2 text-gold-500 font-semibold">
+                    <i data-lucide="phone" class="w-4 h-4"></i> +44 7951 892125
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div class="absolute inset-0 bg-gradient-to-br from-royal-50 via-royal-100 to-royal-200"></div>
-        <div class="absolute inset-0 paw-bg opacity-50"></div>
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-royal-900 via-royal-800 to-royal-900">
         <canvas id="particles-canvas"></canvas>
         
-        <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur rounded-full border border-gold-400/30 shadow-sm">
-                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    <span class="text-xs font-semibold text-royal-800 tracking-wider uppercase">AKC Registered Breeder</span>
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://media.gettyimages.com/id/1372814964/photo/portrait-of-cute-yorkshire-terrier-dog-on-the-sofa.jpg?s=170667a&w=gi&k=20&c=gFTeA3_HrK8G40vHhrEvFdAIphYS4ALfkj2jykjxN9s=" alt="Yorkie Background" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white space-y-8">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="text-sm font-medium tracking-wide">Puppies Available Now</span>
                 </div>
                 
-                <h1 class="font-serif text-5xl md:text-7xl font-bold text-royal-900 leading-tight">
-                    Discover Your <span class="text-gradient">Perfect</span> Companion
+                <h1 class="font-serif text-5xl lg:text-7xl font-bold leading-tight">
+                    Your Perfect <span class="text-gradient">Yorkie</span><br>
+                    Companion Awaits
                 </h1>
                 
-                <p class="text-lg text-royal-700 leading-relaxed max-w-lg">
-                    Premium Yorkshire Terrier puppies, ethically bred with love and expertise. 
-                    15+ years of excellence delivering joy to families worldwide.
+                <p class="text-lg text-royal-200 max-w-lg leading-relaxed">
+                    Premium AKC-registered Yorkshire Terrier puppies, ethically bred with love and care. 
+                    Delivered to your doorstep worldwide with our white-glove shipping service.
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#puppies" class="px-8 py-4 bg-gradient-to-r from-gold-400 to-gold-600 text-white rounded-full font-semibold shadow-lg shadow-gold-400/30 hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2">
-                        <span>Meet Our Puppies</span>
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    <a href="#puppies" class="bg-gradient-to-r from-gold-400 to-gold-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                        View Available Puppies
                     </a>
-                    <a href="#contact" class="px-8 py-4 border-2 border-royal-800 text-royal-900 rounded-full font-semibold hover:bg-royal-900 hover:text-white transition-all">
-                        Reserve Now
+                    <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'm%20interested%20in%20learning%20more%20about%20your%20Yorkie%20puppies!" target="_blank" class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Chat on WhatsApp
                     </a>
                 </div>
                 
-                <div class="flex items-center gap-6 pt-4">
-                    <div class="flex -space-x-3">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Happy Client">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Happy Client">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Happy Client">
-                    </div>
+                <div class="flex items-center gap-8 pt-4">
                     <div>
-                        <div class="flex items-center gap-1">
-                            <i data-lucide="star" class="w-4 h-4 text-gold-400 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-gold-400 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-gold-400 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-gold-400 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-gold-400 fill-current"></i>
-                        </div>
-                        <p class="text-sm text-royal-600">Trusted by 500+ families worldwide</p>
+                        <div class="counter-value" data-target="15">0</div>
+                        <p class="text-royal-300 text-sm">Years Experience</p>
+                    </div>
+                    <div class="w-px h-12 bg-white/20"></div>
+                    <div>
+                        <div class="counter-value" data-target="500">0</div>
+                        <p class="text-royal-300 text-sm">Happy Families</p>
+                    </div>
+                    <div class="w-px h-12 bg-white/20"></div>
+                    <div>
+                        <div class="counter-value" data-target="150">0</div>
+                        <p class="text-royal-300 text-sm">Countries Shipped</p>
                     </div>
                 </div>
             </div>
             
-            <div class="relative">
-                <div class="absolute inset-0 bg-gradient-to-tr from-gold-400/20 to-royal-800/20 rounded-full blur-3xl animate-pulse-slow"></div>
-                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&h=800&fit=crop" 
-                     alt="Premium Yorkshire Terrier" 
-                     class="relative rounded-3xl shadow-2xl animate-float object-cover w-full aspect-square">
+            <div class="relative hidden lg:block">
+                <div class="absolute top-10 -left-10 w-72 h-72 bg-gold-400/20 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-10 -right-10 w-72 h-72 bg-royal-700/20 rounded-full blur-3xl animate-float-delayed"></div>
                 
-                <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gold-400/20 animate-float-delayed">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                            <i data-lucide="shield-check" class="w-6 h-6 text-green-600"></i>
+                <div class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl border-4 border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-700">
+                    <img src="https://dogtime.com/wp-content/uploads/sites/12/2023/07/GettyImages-1483288610-e1689900335910.jpg" alt="Premium Yorkie Puppy" class="w-full h-[600px] object-cover">
+                    
+                    <div class="absolute bottom-6 left-6 right-6 glass rounded-2xl p-4 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white">
+                            <i data-lucide="crown" class="w-6 h-6"></i>
                         </div>
                         <div>
-                            <p class="font-bold text-royal-900">Health Guaranteed</p>
-                            <p class="text-xs text-royal-600">2-Year Warranty</p>
+                            <p class="text-white font-semibold">Princess Bella</p>
+                            <p class="text-white/70 text-sm">Available Now • 12 Weeks</p>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="badge badge-gold">Premium</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-gold-400/20 animate-float">
+                <div class="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-xl animate-float">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <i data-lucide="globe" class="w-6 h-6 text-blue-600"></i>
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-green-600"></i>
                         </div>
                         <div>
-                            <p class="font-bold text-royal-900">150+ Countries</p>
-                            <p class="text-xs text-royal-600">Worldwide Shipping</p>
+                            <p class="font-semibold text-royal-900 text-sm">Health Guaranteed</p>
+                            <p class="text-xs text-gray-500">Vet Certified</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-white/50"></i>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl"></div>
+    <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="space-y-6">
-                    <span class="text-gold-500 font-semibold tracking-widest uppercase text-sm">Our Story</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-royal-900">15 Years of <span class="text-gradient">Excellence</span></h2>
-                    <p class="text-royal-700 leading-relaxed">
-                        Founded in 2009 in the heart of Beverly Hills, Royal Yorkies began with a simple mission: 
-                        to breed the healthiest, most beautiful Yorkshire Terriers while maintaining the highest ethical standards.
-                    </p>
-                    <p class="text-royal-700 leading-relaxed">
-                        Every puppy is raised in our home with love, socialization, and premium nutrition. 
-                        We partner with leading veterinarians to ensure optimal health and temperament.
-                    </p>
-                    
-                    <div class="grid grid-cols-3 gap-6 pt-6">
-                        <div class="text-center p-4 bg-royal-50 rounded-2xl border border-gold-400/10">
-                            <p class="font-serif text-3xl font-bold text-gold-500">500+</p>
-                            <p class="text-xs text-royal-600 mt-1 uppercase tracking-wide">Happy Families</p>
-                        </div>
-                        <div class="text-center p-4 bg-royal-50 rounded-2xl border border-gold-400/10">
-                            <p class="font-serif text-3xl font-bold text-gold-500">15</p>
-                            <p class="text-xs text-royal-600 mt-1 uppercase tracking-wide">Years</p>
-                        </div>
-                        <div class="text-center p-4 bg-royal-50 rounded-2xl border border-gold-400/10">
-                            <p class="font-serif text-3xl font-bold text-gold-500">100%</p>
-                            <p class="text-xs text-royal-600 mt-1 uppercase tracking-wide">AKC Registered</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative reveal">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-4 mt-8">
-                            <div class="img-zoom-container rounded-2xl overflow-hidden shadow-lg">
-                                <img src="https://images.unsplash.com/photo-1591769225440-811ad7d6eca6?w=400&h=500&fit=crop" class="img-zoom w-full h-64 object-cover" alt="Yorkie Puppy">
+                            <div class="rounded-3xl overflow-hidden shadow-lg img-zoom-container">
+                                <img src="https://www.akc.org/wp-content/uploads/2018/03/yorkshire-terrier-puppies.jpg" alt="Yorkie Puppies with Family" class="w-full h-48 object-cover img-zoom">
                             </div>
-                            <div class="img-zoom-container rounded-2xl overflow-hidden shadow-lg">
-                                <img src="https://images.unsplash.com/photo-1600804340584-c7db2eacf0bf?w=400&h=300&fit=crop" class="img-zoom w-full h-48 object-cover" alt="Yorkie Playing">
+                            <div class="rounded-3xl overflow-hidden shadow-lg img-zoom-container">
+                                <img src="https://cdn.greenfieldpuppies.com/wp-content/uploads/2025/03/three-yorkie-puppies-sitting-in-grass-scaled.jpeg" alt="Three Yorkie Puppies" class="w-full h-64 object-cover img-zoom">
                             </div>
                         </div>
                         <div class="space-y-4">
-                            <div class="img-zoom-container rounded-2xl overflow-hidden shadow-lg">
-                                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400&h=300&fit=crop" class="img-zoom w-full h-48 object-cover" alt="Yorkie Portrait">
+                            <div class="rounded-3xl overflow-hidden shadow-lg img-zoom-container">
+                                <img src="https://nbcsports.brightspotcdn.com/dims4/default/41ba82d/2147483647/strip/true/crop/1920x1080+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fhdliveextra-a.akamaihd.net%2FHD%2Fimage_sports%2FNBCU_Sports_Group_-_nbcsports%2F807%2F495%2Fnbc_dog_yorkshireterrier_231120.jpg" alt="Champion Yorkie Show Dog" class="w-full h-64 object-cover img-zoom">
                             </div>
-                            <div class="img-zoom-container rounded-2xl overflow-hidden shadow-lg">
-                                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&h=500&fit=crop" class="img-zoom w-full h-64 object-cover" alt="Yorkie Cute">
+                            <div class="rounded-3xl overflow-hidden shadow-lg img-zoom-container">
+                                <img src="https://www.furrylicious.com/wp-content/uploads/2025/04/Yorkie.jpg" alt="Happy Yorkie Pet" class="w-full h-48 object-cover img-zoom">
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-gold-400 to-gold-600 text-white rounded-2xl p-6 shadow-xl">
+                        <p class="font-serif text-4xl font-bold">16+</p>
+                        <p class="text-sm font-medium opacity-90">Years of Excellence</p>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <span class="badge badge-outline mb-4">About Us</span>
+                    <h2 class="font-serif text-4xl lg:text-5xl font-bold text-royal-900 mb-6">Where Luxury Meets <span class="text-gradient">Love</span></h2>
+                    <div class="section-divider ml-0"></div>
+                    
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Founded in 2009 in the heart of Beverly Hills, Royal Yorkies has established itself as the premier destination for discerning families seeking the finest Yorkshire Terrier companions. Our breeding program combines decades of expertise with an unwavering commitment to ethical practices.
+                    </p>
+                    
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Every puppy in our care receives round-the-clock attention, premium nutrition, early socialization, and comprehensive veterinary care. We don't just breed dogs—we cultivate lifelong family members who bring joy, love, and elegance to their forever homes.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="heart" class="w-5 h-5 text-gold-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-royal-900">Ethical Breeding</h4>
+                                <p class="text-sm text-gray-500">AKC registered, DNA tested</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="stethoscope" class="w-5 h-5 text-gold-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-royal-900">Health First</h4>
+                                <p class="text-sm text-gray-500">Full vet checks & vaccines</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="plane" class="w-5 h-5 text-gold-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-royal-900">Global Delivery</h4>
+                                <p class="text-sm text-gray-500">150+ countries served</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="award" class="w-5 h-5 text-gold-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-royal-900">Show Quality</h4>
+                                <p class="text-sm text-gray-500">Champion bloodlines</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold-500 font-semibold hover:gap-4 transition-all">
+                        Learn More About Our Process <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Available Puppies Section -->
-    <section id="puppies" class="py-24 bg-royal-50 paw-bg">
+    <section id="puppies" class="py-24 bg-royal-50">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-gold-500 font-semibold tracking-widest uppercase text-sm">Available Now</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-royal-900 mt-4">Meet Our <span class="text-gradient">Royal Puppies</span></h2>
-                <p class="text-royal-600 mt-4 max-w-2xl mx-auto">Each puppy comes with AKC registration, health guarantee, and lifetime support. Reserve yours today.</p>
+            <div class="text-center mb-16 reveal">
+                <span class="badge badge-gold mb-4">Available Now</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-bold text-royal-900 mb-4">Meet Our <span class="text-gradient">Royal Puppies</span></h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Each puppy is hand-raised with love, fully vaccinated, and comes with a comprehensive health guarantee. Reserve your companion today.</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Puppy Card 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-gold-400/10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Puppy 1 -->
+                <div class="puppy-card reveal">
                     <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=700&fit=crop" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700" alt="Prince">
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">Available</div>
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                            <p class="text-white font-serif text-2xl font-bold">Prince</p>
-                            <p class="text-gold-400 text-sm font-medium">Male • 12 Weeks</p>
+                        <img src="https://www.teacupspuppies.com/wp-content/uploads/2017/06/micro-teacup-yorkie-puppy-for-sale-124-teacup-puppies.jpg" alt="Princess Bella - Teacup Yorkie" class="puppy-img">
+                        <div class="absolute top-4 left-4">
+                            <span class="badge badge-gold">Teacup</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-green-500 text-white">Available</span>
                         </div>
                     </div>
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-center">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
                             <div>
-                                <p class="text-xs text-royal-500 uppercase tracking-wide">Price</p>
-                                <p class="font-serif text-2xl font-bold text-royal-900">$600</p>
+                                <h3 class="font-serif text-xl font-bold text-royal-900">Princess Bella</h3>
+                                <p class="text-sm text-gray-500">Female • 12 Weeks</p>
                             </div>
-                            <div class="text-right">
-                                <p class="text-xs text-royal-500 uppercase tracking-wide">Weight</p>
-                                <p class="font-semibold text-royal-900">2.4 lbs</p>
-                            </div>
+                            <p class="font-serif text-2xl font-bold text-gold-500">$600</p>
                         </div>
-                        <div class="flex gap-2 flex-wrap">
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">Teacup</span>
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">Champion Bloodline</span>
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">Microchipped</span>
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">AKC Registered</span>
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Vet Checked</span>
                         </div>
-                        <button onclick="openChatWithMessage('Hi, I am interested in Prince! Can you tell me more about him?')" class="w-full py-3 bg-gradient-to-r from-royal-900 to-royal-800 text-white rounded-xl font-semibold hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="message-circle" class="w-5 h-5"></i>
-                            Inquire About Prince
-                        </button>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Stunning teacup Yorkie with a silky golden coat. Perfect temperament, already potty-trained and crate-trained.</p>
+                        <div class="flex gap-3">
+                            <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'm%20interested%20in%20Princess%20Bella!" target="_blank" class="flex-1 bg-gradient-to-r from-gold-400 to-gold-600 text-white py-3 rounded-full text-center font-semibold text-sm hover:shadow-lg transition-all">
+                                Reserve Now
+                            </a>
+                            <button onclick="openLightbox('https://www.teacupspuppies.com/wp-content/uploads/2017/06/micro-teacup-yorkie-puppy-for-sale-124-teacup-puppies.jpg')" class="w-12 h-12 border-2 border-gold-400 rounded-full flex items-center justify-center text-gold-500 hover:bg-gold-50 transition-all">
+                                <i data-lucide="expand" class="w-5 h-5"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Puppy Card 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-gold-400/10">
+                
+                <!-- Puppy 2 -->
+                <div class="puppy-card reveal">
                     <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1591769225440-811ad7d6eca6?w=600&h=700&fit=crop" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700" alt="Luna">
-                        <div class="absolute top-4 right-4 bg-gold-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">Reserved</div>
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                            <p class="text-white font-serif text-2xl font-bold">Luna</p>
-                            <p class="text-gold-400 text-sm font-medium">Female • 10 Weeks</p>
+                        <img src="https://tiffanyspuppies.com/x/cdn/?https://storage.googleapis.com/production-homestead-v1-0-9/499/221499/WBrZ4f3I/4eef726e49374dcea4532f5c32a9db58" alt="Duke Maximus - Yorkie Puppy" class="puppy-img">
+                        <div class="absolute top-4 left-4">
+                            <span class="badge badge-outline">Standard</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-green-500 text-white">Available</span>
                         </div>
                     </div>
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-center">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
                             <div>
-                                <p class="text-xs text-royal-500 uppercase tracking-wide">Price</p>
-                                <p class="font-serif text-2xl font-bold text-royal-900">$4,200</p>
+                                <h3 class="font-serif text-xl font-bold text-royal-900">Duke Maximus</h3>
+                                <p class="text-sm text-gray-500">Male • 10 Weeks</p>
                             </div>
-                            <div class="text-right">
-                                <p class="text-xs text-royal-500 uppercase tracking-wide">Weight</p>
-                                <p class="font-semibold text-royal-900">2.1 lbs</p>
-                            </div>
+                            <p class="font-serif text-2xl font-bold text-gold-500">$800</p>
                         </div>
-                        <div class="flex gap-2 flex-wrap">
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">Teacup</span>
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">Parti Color</span>
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">Vaccinated</span>
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Champion Line</span>
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Microchipped</span>
                         </div>
-                        <button onclick="openChatWithMessage('Hi, I love Luna! Is she still available or do you have similar puppies?')" class="w-full py-3 bg-gradient-to-r from-royal-900 to-royal-800 text-white rounded-xl font-semibold hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="message-circle" class="w-5 h-5"></i>
-                            Join Waitlist
-                        </button>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Handsome boy from champion bloodlines. Bold personality, intelligent, and eager to please. Perfect for families.</p>
+                        <div class="flex gap-3">
+                            <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'm%20interested%20in%20Duke%20Maximus!" target="_blank" class="flex-1 bg-gradient-to-r from-gold-400 to-gold-600 text-white py-3 rounded-full text-center font-semibold text-sm hover:shadow-lg transition-all">
+                                Reserve Now
+                            </a>
+                            <button onclick="openLightbox('https://tiffanyspuppies.com/x/cdn/?https://storage.googleapis.com/production-homestead-v1-0-9/499/221499/WBrZ4f3I/4eef726e49374dcea4532f5c32a9db58')" class="w-12 h-12 border-2 border-gold-400 rounded-full flex items-center justify-center text-gold-500 hover:bg-gold-50 transition-all">
+                                <i data-lucide="expand" class="w-5 h-5"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Puppy Card 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group border border-gold-400/10">
+                
+                <!-- Puppy 3 -->
+                <div class="puppy-card reveal">
                     <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1600804340584-c7db2eacf0bf?w=600&h=700&fit=crop" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700" alt="Maximus">
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">Available</div>
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                            <p class="text-white font-serif text-2xl font-bold">Maximus</p>
-                            <p class="text-gold-400 text-sm font-medium">Male • 14 Weeks</p>
+                        <img src="https://romanempireyorkies.com/wp-content/uploads/2022/05/Golddust-Gallery-4.jpg" alt="Lady Aurora - Golden Yorkie" class="puppy-img">
+                        <div class="absolute top-4 left-4">
+                            <span class="badge badge-gold">Rare Color</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-yellow-500 text-white">Reserved</span>
                         </div>
                     </div>
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-center">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
                             <div>
-                                <p class="text-xs text-royal-500 uppercase tracking-wide">Price</p>
-                                <p class="font-serif text-2xl font-bold text-royal-900">$3,500</p>
+                                <h3 class="font-serif text-xl font-bold text-royal-900">Lady Aurora</h3>
+                                <p class="text-sm text-gray-500">Female • 14 Weeks</p>
                             </div>
-                            <div class="text-right">
-                                <p class="text-xs text-royal-500 uppercase tracking-wide">Weight</p>
-                                <p class="font-semibold text-royal-900">3.2 lbs</p>
+                            <p class="font-serif text-2xl font-bold text-gold-500">$500</p>
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Golddust</span>
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Pedigree</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Rare golden blonde Golddust Yorkie. Exquisite coat color, gentle soul, and show-quality conformation.</p>
+                        <div class="flex gap-3">
+                            <button disabled class="flex-1 bg-gray-300 text-white py-3 rounded-full text-center font-semibold text-sm cursor-not-allowed">
+                                Reserved
+                            </button>
+                            <button onclick="openLightbox('https://romanempireyorkies.com/wp-content/uploads/2022/05/Golddust-Gallery-4.jpg')" class="w-12 h-12 border-2 border-gold-400 rounded-full flex items-center justify-center text-gold-500 hover:bg-gold-50 transition-all">
+                                <i data-lucide="expand" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Puppy 4 -->
+                <div class="puppy-card reveal">
+                    <div class="relative overflow-hidden">
+                        <img src="https://img.freepik.com/premium-photo/one-month-old-yorkshire-terrier-puppy-sleeping-gray-background-interior_73359-147.jpg" alt="Prince Oliver - Sleeping Yorkie" class="puppy-img">
+                        <div class="absolute top-4 left-4">
+                            <span class="badge badge-outline">Toy Size</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-green-500 text-white">Available</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-royal-900">Prince Oliver</h3>
+                                <p class="text-sm text-gray-500">Male • 11 Weeks</p>
+                            </div>
+                            <p class="font-serif text-2xl font-bold text-gold-500">$600</p>
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Toy Size</span>
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Hypoallergenic</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Adorable toy-sized Yorkie with traditional black and tan markings. Calm, cuddly, and perfect for apartment living.</p>
+                        <div class="flex gap-3">
+                            <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'm%20interested%20in%20Prince%20Oliver!" target="_blank" class="flex-1 bg-gradient-to-r from-gold-400 to-gold-600 text-white py-3 rounded-full text-center font-semibold text-sm hover:shadow-lg transition-all">
+                                Reserve Now
+                            </a>
+                            <button onclick="openLightbox('https://img.freepik.com/premium-photo/one-month-old-yorkshire-terrier-puppy-sleeping-gray-background-interior_73359-147.jpg')" class="w-12 h-12 border-2 border-gold-400 rounded-full flex items-center justify-center text-gold-500 hover:bg-gold-50 transition-all">
+                                <i data-lucide="expand" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Puppy 5 -->
+                <div class="puppy-card reveal">
+                    <div class="relative overflow-hidden">
+                        <img src="https://cdn.shopify.com/s/files/1/1921/1295/files/Princess_480x480.jpg?v=1675883265" alt=" Duchess Luna - Yorkie with Bow" class="puppy-img">
+                        <div class="absolute top-4 left-4">
+                            <span class="badge badge-gold">Premium</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-green-500 text-white">Available</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-royal-900">Duchess Luna</h3>
+                                <p class="text-sm text-gray-500">Female • 13 Weeks</p>
+                            </div>
+                            <p class="font-serif text-2xl font-bold text-gold-500">$800</p>
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Parti Color</span>
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Dewormed</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Stunning parti-color Yorkie with a playful personality. Loves children, fully socialized with other pets.</p>
+                        <div class="flex gap-3">
+                            <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'm%20interested%20in%20Duchess%20Luna!" target="_blank" class="flex-1 bg-gradient-to-r from-gold-400 to-gold-600 text-white py-3 rounded-full text-center font-semibold text-sm hover:shadow-lg transition-all">
+                                Reserve Now
+                            </a>
+                            <button onclick="openLightbox('https://cdn.shopify.com/s/files/1/1921/1295/files/Princess_480x480.jpg?v=1675883265')" class="w-12 h-12 border-2 border-gold-400 rounded-full flex items-center justify-center text-gold-500 hover:bg-gold-50 transition-all">
+                                <i data-lucide="expand" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Puppy 6 -->
+                <div class="puppy-card reveal">
+                    <div class="relative overflow-hidden">
+                        <img src="https://static.vecteezy.com/system/resources/previews/002/096/655/non_2x/yorkshire-terrier-puppy-posing-on-a-black-background-free-photo.jpg" alt="King Leo - Yorkie Portrait" class="puppy-img">
+                        <div class="absolute top-4 left-4">
+                            <span class="badge badge-outline">Standard</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="badge bg-green-500 text-white">Available</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-royal-900">King Leo</h3>
+                                <p class="text-sm text-gray-500">Male • 15 Weeks</p>
+                            </div>
+                            <p class="font-serif text-2xl font-bold text-gold-500">$600</p>
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Show Potential</span>
+                            <span class="px-3 py-1 bg-royal-50 rounded-full text-xs text-royal-700 font-medium">Trained</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Majestic standard Yorkie with perfect conformation. Already knows basic commands, leash-trained, and travel-ready.</p>
+                        <div class="flex gap-3">
+                            <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'm%20interested%20in%20King%20Leo!" target="_blank" class="flex-1 bg-gradient-to-r from-gold-400 to-gold-600 text-white py-3 rounded-full text-center font-semibold text-sm hover:shadow-lg transition-all">
+                                Reserve Now
+                            </a>
+                            <button onclick="openLightbox('https://static.vecteezy.com/system/resources/previews/002/096/655/non_2x/yorkshire-terrier-puppy-posing-on-a-black-background-free-photo.jpg')" class="w-12 h-12 border-2 border-gold-400 rounded-full flex items-center justify-center text-gold-500 hover:bg-gold-50 transition-all">
+                                <i data-lucide="expand" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 reveal">
+                <p class="text-gray-500 mb-4">Don't see your perfect match?</p>
+                <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'd%20like%20to%20inquire%20about%20upcoming%20litters!" target="_blank" class="inline-flex items-center gap-2 border-2 border-gold-400 text-gold-500 px-8 py-3 rounded-full font-semibold hover:bg-gold-50 transition-all">
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                    Join Our Waitlist
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="badge badge-outline mb-4">Our Services</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-bold text-royal-900 mb-4">White-Glove <span class="text-gradient">Services</span></h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Beyond breeding, we provide a complete luxury experience for you and your new family member.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card reveal">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white shadow-lg">
+                        <i data-lucide="plane" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-royal-900 mb-3">Worldwide Shipping</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Safe, climate-controlled transport to 150+ countries. Door-to-door delivery with real-time tracking and a dedicated travel nanny.</p>
+                </div>
+                
+                <div class="service-card reveal">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white shadow-lg">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-royal-900 mb-3">Health Guarantee</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Comprehensive 2-year genetic health guarantee. Full veterinary records, vaccinations, deworming, and microchipping included.</p>
+                </div>
+                
+                <div class="service-card reveal">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white shadow-lg">
+                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-royal-900 mb-3">Puppy Training</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Optional 4-week intensive training program. Potty training, crate training, basic commands, and socialization before delivery.</p>
+                </div>
+                
+                <div class="service-card reveal">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white shadow-lg">
+                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-royal-900 mb-3">Lifetime Support</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">24/7 breeder support for life. Nutrition guidance, grooming tips, health advice, and behavioral consultations always available.</p>
+                </div>
+            </div>
+            
+            <!-- Shipping Visual -->
+            <div class="mt-16 rounded-3xl overflow-hidden shadow-2xl reveal">
+                <div class="relative">
+                    <img src="https://wildone.com/cdn/shop/files/WO_VM_Studio_PDP_TravelCarrier_Black_Dog_02_Web.webp?v=1714529303&width=1200" alt="Yorkie Travel Carrier" class="w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-royal-900/80 to-transparent flex items-center">
+                        <div class="p-8 lg:p-16 max-w-xl">
+                            <h3 class="font-serif text-3xl font-bold text-white mb-4">Travel in Style & Safety</h3>
+                            <p class="text-white/80 mb-6 leading-relaxed">Our puppies travel in airline-approved luxury carriers with climate control, comfortable bedding, and constant supervision. Every journey is insured and tracked in real-time.</p>
+                            <div class="flex gap-4">
+                                <div class="flex items-center gap-2 text-white">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-gold-400"></i>
+                                    <span class="text-sm">USDA Approved</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-white">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-gold-400"></i>
+                                    <span class="text-sm">IATA Compliant</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex gap-2 flex-wrap">
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">Standard</span>
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">Traditional</span>
-                            <span class="px-3 py-1 bg-royal-50 text-royal-700 rounded-full text-xs font-medium border border-royal-100">AKC Papers</span>
-                        </div>
-                        <button onclick="openChatWithMessage('Hello! Maximus is adorable. Can I schedule a video call to see him?')" class="w-full py-3 bg-gradient-to-r from-royal-900 to-royal-800 text-white rounded-xl font-semibold hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="message-circle" class="w-5 h-5"></i>
-                            Inquire About Maximus
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Full Gallery Section -->
-    <section id="gallery" class="py-24 bg-white">
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-royal-50">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-gold-500 font-semibold tracking-widest uppercase text-sm">Our Gallery</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-royal-900 mt-4">Royal <span class="text-gradient">Moments</span></h2>
-                <p class="text-royal-600 mt-4 max-w-2xl mx-auto">Glimpses of our precious puppies and the love they bring to families around the world.</p>
+            <div class="text-center mb-16 reveal">
+                <span class="badge badge-gold mb-4">Gallery</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-bold text-royal-900 mb-4">Our <span class="text-gradient">Royal Family</span></h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Glimpses of our beautiful Yorkies living their best lives with their forever families.</p>
             </div>
             
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=750&fit=crop" class="w-full h-full object-cover" alt="Yorkie Puppy">
+                <div class="gallery-item reveal" onclick="openLightbox('https://thumbs.dreamstime.com/b/yorkshire-terrier-wearing-tuxedo-red-bow-tie-sitting-white-cube-near-roses-luxury-pet-portrait-studio-small-yorkshire-terrier-411720691.jpg')">
+                    <img src="https://thumbs.dreamstime.com/b/yorkshire-terrier-wearing-tuxedo-red-bow-tie-sitting-white-cube-near-roses-luxury-pet-portrait-studio-small-yorkshire-terrier-411720691.jpg" alt="Yorkie in Tuxedo" class="w-full h-full object-cover">
                     <div class="gallery-overlay">
-                        <p class="font-serif text-xl font-bold">Bella</p>
-                        <p class="text-sm text-gold-400">12 Weeks • Female</p>
+                        <h4 class="font-serif text-xl font-bold">Formal Occasions</h4>
+                        <p class="text-sm text-white/80">Dressed to impress</p>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1591769225440-811ad7d6eca6?w=600&h=750&fit=crop" class="w-full h-full object-cover" alt="Yorkie Playing">
+                
+                <div class="gallery-item reveal" onclick="openLightbox('https://i.etsystatic.com/10255540/r/il/2d631b/2796073240/il_570xN.2796073240_i56t.jpg')">
+                    <img src="https://i.etsystatic.com/10255540/r/il/2d631b/2796073240/il_570xN.2796073240_i56t.jpg" alt="Yorkie with Crown" class="w-full h-full object-cover">
                     <div class="gallery-overlay">
-                        <p class="font-serif text-xl font-bold">Charlie</p>
-                        <p class="text-sm text-gold-400">10 Weeks • Male</p>
+                        <h4 class="font-serif text-xl font-bold">Birthday Celebrations</h4>
+                        <p class="text-sm text-white/80">Royal treatment always</p>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1600804340584-c7db2eacf0bf?w=600&h=750&fit=crop" class="w-full h-full object-cover" alt="Yorkie Portrait">
+                
+                <div class="gallery-item reveal" onclick="openLightbox('https://cdn.greenfieldpuppies.com/wp-content/uploads/2025/03/three-yorkie-puppies-sitting-in-grass-scaled.jpeg')">
+                    <img src="https://cdn.greenfieldpuppies.com/wp-content/uploads/2025/03/three-yorkie-puppies-sitting-in-grass-scaled.jpeg" alt="Three Yorkie Puppies in Grass" class="w-full h-full object-cover">
                     <div class="gallery-overlay">
-                        <p class="font-serif text-xl font-bold">Daisy</p>
-                        <p class="text-sm text-gold-400">8 Weeks • Female</p>
+                        <h4 class="font-serif text-xl font-bold">Playtime Adventures</h4>
+                        <p class="text-sm text-white/80">Outdoor fun in the sun</p>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=600&h=750&fit=crop" class="w-full h-full object-cover" alt="Yorkie Cute">
+                
+                <div class="gallery-item reveal" onclick="openLightbox('https://m.media-amazon.com/images/I/71zFK5dIDkL._AC_UF350,350_QL80_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/71zFK5dIDkL._AC_UF350,350_QL80_.jpg" alt="Yorkie with Tiara" class="w-full h-full object-cover">
                     <div class="gallery-overlay">
-                        <p class="font-serif text-xl font-bold">Rocky</p>
-                        <p class="text-sm text-gold-400">11 Weeks • Male</p>
+                        <h4 class="font-serif text-xl font-bold">Queen for a Day</h4>
+                        <p class="text-sm text-white/80">Every day is special</p>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&h=750&fit=crop" class="w-full h-full object-cover" alt="Yorkie Sleep">
+                
+                <div class="gallery-item reveal" onclick="openLightbox('https://www.akc.org/wp-content/uploads/2018/03/yorkshire-terrier-puppies.jpg')">
+                    <img src="https://www.akc.org/wp-content/uploads/2018/03/yorkshire-terrier-puppies.jpg" alt="Yorkie Puppies with Owner" class="w-full h-full object-cover">
                     <div class="gallery-overlay">
-                        <p class="font-serif text-xl font-bold">Coco</p>
-                        <p class="text-sm text-gold-400">9 Weeks • Female</p>
+                        <h4 class="font-serif text-xl font-bold">New Beginnings</h4>
+                        <p class="text-sm text-white/80">First day home joy</p>
                     </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=750&fit=crop" class="w-full h-full object-cover" alt="Yorkie Family">
+                
+                <div class="gallery-item reveal" onclick="openLightbox('https://www.furrylicious.com/wp-content/uploads/2025/04/Yorkie.jpg')">
+                    <img src="https://www.furrylicious.com/wp-content/uploads/2025/04/Yorkie.jpg" alt="Happy Yorkie Outdoors" class="w-full h-full object-cover">
                     <div class="gallery-overlay">
-                        <p class="font-serif text-xl font-bold">The Royal Litter</p>
-                        <p class="text-sm text-gold-400">Newborn Puppies</p>
-                    </div>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=600&h=750&fit=crop" class="w-full h-full object-cover" alt="Yorkie Beach">
-                    <div class="gallery-overlay">
-                        <p class="font-serif text-xl font-bold">Ocean</p>
-                        <p class="text-sm text-gold-400">13 Weeks • Male</p>
-                    </div>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=750&fit=crop" class="w-full h-full object-cover" alt="Yorkie Happy">
-                    <div class="gallery-overlay">
-                        <p class="font-serif text-xl font-bold">Sugar</p>
-                        <p class="text-sm text-gold-400">7 Weeks • Female</p>
+                        <h4 class="font-serif text-xl font-bold">Happy Tails</h4>
+                        <p class="text-sm text-white/80">Living their best life</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Gallery Image">
-    </div>
+    <!-- Process Section -->
+    <section id="process" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="badge badge-outline mb-4">How It Works</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-bold text-royal-900 mb-4">Your Journey to <span class="text-gradient">Parenthood</span></h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">A seamless, transparent process designed to match you with your perfect companion.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Connector Line -->
+                <div class="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400"></div>
+                
+                <div class="process-step reveal">
+                    <div class="process-step-number">1</div>
+                    <h3 class="font-serif text-xl font-bold text-royal-900 mb-3">Browse & Choose</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Explore our available puppies with detailed profiles, photos, and videos. Schedule a video call to meet your favorites.</p>
+                </div>
+                
+                <div class="process-step reveal">
+                    <div class="process-step-number">2</div>
+                    <h3 class="font-serif text-xl font-bold text-royal-900 mb-3">Reserve & Contract</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Secure your puppy with a deposit. Sign our comprehensive purchase agreement with health guarantee terms.</p>
+                </div>
+                
+                <div class="process-step reveal">
+                    <div class="process-step-number">3</div>
+                    <h3 class="font-serif text-xl font-bold text-royal-900 mb-3">Preparation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">We handle all vaccinations, microchipping, health certificates, and travel documentation. You receive weekly updates.</p>
+                </div>
+                
+                <div class="process-step reveal">
+                    <div class="process-step-number">4</div>
+                    <h3 class="font-serif text-xl font-bold text-royal-900 mb-3">Delivery & Support</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Your puppy arrives safely at your door with a luxury starter kit. Enjoy lifetime breeder support and guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Shipping Section -->
-    <section id="shipping" class="py-24 bg-gradient-to-br from-royal-900 to-royal-800 text-white relative overflow-hidden">
-        <div class="absolute inset-0 paw-bg opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-gold-400 font-semibold tracking-widest uppercase text-sm">Global Delivery</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-4">Worldwide <span class="text-gradient">Shipping</span></h2>
-                <p class="text-royal-200 mt-4 max-w-2xl mx-auto">We deliver your new family member safely to your doorstep, anywhere in the world.</p>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-royal-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="badge badge-gold mb-4">Testimonials</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-bold text-royal-900 mb-4">Happy <span class="text-gradient">Families</span></h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Hear from our extended family of satisfied clients around the world.</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:bg-white/15 transition-all">
-                    <div class="w-16 h-16 bg-gold-400/20 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="plane" class="w-8 h-8 text-gold-400"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
                     </div>
-                    <h3 class="font-serif text-xl font-bold mb-3">Premium Air Transport</h3>
-                    <p class="text-royal-200 text-sm leading-relaxed">Climate-controlled cabins with real-time tracking. Your puppy travels in first-class comfort with dedicated pet handlers.</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">"Princess Bella arrived in Dubai perfectly healthy and happy. The travel nanny was amazing, and the puppy starter kit had everything we needed. Royal Yorkies exceeded every expectation!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white font-bold">SM</div>
+                        <div>
+                            <h4 class="font-semibold text-royal-900">Sarah Mitchell</h4>
+                            <p class="text-sm text-gray-500">Dubai, UAE</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:bg-white/15 transition-all">
-                    <div class="w-16 h-16 bg-gold-400/20 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="shield-check" class="w-8 h-8 text-gold-400"></i>
+                <div class="testimonial-card reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
                     </div>
-                    <h3 class="font-serif text-xl font-bold mb-3">Health Certified</h3>
-                    <p class="text-royal-200 text-sm leading-relaxed">Complete veterinary health certificates, vaccinations, and microchip documentation for smooth international customs clearance.</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">"We were nervous about buying a puppy online from overseas, but the team at Royal Yorkies made it seamless. Duke Maximus is the light of our family. Worth every penny!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-royal-700 to-royal-900 flex items-center justify-center text-white font-bold">JR</div>
+                        <div>
+                            <h4 class="font-semibold text-royal-900">James Rodriguez</h4>
+                            <p class="text-sm text-gray-500">London, UK</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:bg-white/15 transition-all">
-                    <div class="w-16 h-16 bg-gold-400/20 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="clock" class="w-8 h-8 text-gold-400"></i>
+                <div class="testimonial-card reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
                     </div>
-                    <h3 class="font-serif text-xl font-bold mb-3">24-72 Hour Delivery</h3>
-                    <p class="text-royal-200 text-sm leading-relaxed">Express worldwide delivery to 150+ countries. Live updates every step of the way until your puppy is in your arms.</p>
-                </div>
-            </div>
-            
-            <div class="mt-16 bg-gradient-to-r from-gold-400/20 to-gold-600/20 rounded-3xl p-8 md:p-12 border border-gold-400/30 flex flex-col md:flex-row items-center justify-between gap-8">
-                <div class="flex items-center gap-6">
-                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center globe-spin">
-                        <i data-lucide="globe" class="w-10 h-10 text-gold-400"></i>
-                    </div>
-                    <div>
-                        <p class="font-serif text-2xl font-bold">150+ Countries Served</p>
-                        <p class="text-royal-200">From Dubai to Tokyo, London to Sydney</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">"The attention to detail is incredible. From the first video call to the day our puppy arrived in Sydney, every step was professional and caring. Our Lady Aurora is absolutely perfect."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white font-bold">EC</div>
+                        <div>
+                            <h4 class="font-semibold text-royal-900">Emily Chen</h4>
+                            <p class="text-sm text-gray-500">Sydney, Australia</p>
+                        </div>
                     </div>
                 </div>
-                <button onclick="openChatWithMessage('I would like to know more about international shipping to my country.')" class="px-8 py-4 bg-gold-500 hover:bg-gold-400 text-royal-900 rounded-full font-bold transition-all shadow-lg shadow-gold-500/30 hover:scale-105">
-                    Get Shipping Quote
-                </button>
+                
+                <div class="testimonial-card reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">"As a veterinarian, I have high standards for breeders. Royal Yorkies surpasses them all. Health testing, proper socialization, and genuine care for their dogs. Highly recommend!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-royal-700 to-royal-900 flex items-center justify-center text-white font-bold">DK</div>
+                        <div>
+                            <h4 class="font-semibold text-royal-900">Dr. Karen Williams</h4>
+                            <p class="text-sm text-gray-500">Toronto, Canada</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">"This is our third Yorkie from Royal Yorkies. The consistency in quality, health, and temperament is remarkable. They truly are the best in the business. Forever grateful!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white font-bold">MF</div>
+                        <div>
+                            <h4 class="font-semibold text-royal-900">Marco Ferrari</h4>
+                            <p class="text-sm text-gray-500">Milan, Italy</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-gold-400 fill-gold-400"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">"The luxury starter kit alone shows how much they care. Organic food, designer collar, premium toys, and a handwritten welcome card. Our King Leo is treated like royalty!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-royal-700 to-royal-900 flex items-center justify-center text-white font-bold">AP</div>
+                        <div>
+                            <h4 class="font-semibold text-royal-900">Amanda Park</h4>
+                            <p class="text-sm text-gray-500">Seoul, South Korea</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-royal-50">
+    <section id="contact" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div class="space-y-8">
-                    <div>
-                        <span class="text-gold-500 font-semibold tracking-widest uppercase text-sm">Get In Touch</span>
-                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-royal-900 mt-4">Start Your <span class="text-gradient">Journey</span></h2>
-                        <p class="text-royal-600 mt-4">Ready to welcome a Royal Yorkie into your home? Contact us today to reserve your perfect companion.</p>
-                    </div>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="reveal">
+                    <span class="badge badge-outline mb-4">Get In Touch</span>
+                    <h2 class="font-serif text-4xl lg:text-5xl font-bold text-royal-900 mb-6">Let's Find Your <span class="text-gradient">Perfect Match</span></h2>
+                    <div class="section-divider ml-0"></div>
+                    <p class="text-gray-600 leading-relaxed mb-8">Ready to welcome a Royal Yorkie into your life? Fill out the form and we'll get back to you within 24 hours. Or reach out directly via WhatsApp, phone, or email.</p>
                     
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-gold-400/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-gold-500"></i>
+                    <div class="space-y-6 mb-8">
+                        <a href="https://wa.me/1234567890" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-green-50 border border-green-200 hover:bg-green-100 transition-all group">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-royal-900">WhatsApp</p>
+                                <p class="text-green-600 text-sm">+44 7951 892125</p>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-green-500 ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a>
+                        
+                        <a href="tel:+1234567890" class="flex items-center gap-4 p-4 rounded-2xl bg-royal-50 border border-royal-200 hover:bg-royal-100 transition-all group">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-royal-900">Phone</p>
+                                <p class="text-royal-600 text-sm">++44 7951 892125</p>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-gold-500 ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a>
+                        
+                        <a href="mailto:info@royalyorkies.com" class="flex items-center gap-4 p-4 rounded-2xl bg-royal-50 border border-royal-200 hover:bg-royal-100 transition-all group">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-royal-700 to-royal-900 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-royal-900">Email</p>
+                                <p class="text-royal-600 text-sm">yorkiepuppyhome1@gmail.com</p>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-royal-500 ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </a>
+                        
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-royal-50 border border-royal-200">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-royal-700 to-royal-900 flex items-center justify-center text-white">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
                             </div>
                             <div>
                                 <p class="font-semibold text-royal-900">Location</p>
                                 <p class="text-royal-600 text-sm">Beverly Hills, Los Angeles, CA 90210</p>
                             </div>
                         </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-gold-400/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="phone" class="w-5 h-5 text-gold-500"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-royal-900">Phone</p>
-                                <p class="text-royal-600 text-sm">+44 7951892125</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-gold-400/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="mail" class="w-5 h-5 text-gold-500"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-royal-900">Email</p>
-                                <p class="text-royal-600 text-sm">yorkiepuppyhome1@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="message-circle" class="w-5 h-5 text-green-600"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-royal-900">WhatsApp</p>
-                                <p class="text-royal-600 text-sm">+44 7951892125</p>
-                                <a href="https://wa.me/+44 7951892125" target="_blank" class="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-green-500 text-white rounded-full text-sm font-semibold hover:bg-green-600 transition-colors shadow-lg shadow-green-500/30">
-                                    <i data-lucide="external-link" class="w-4 h-4"></i>
-                                    Chat on WhatsApp
-                                </a>
-                            </div>
+                    </div>
+                    
+                    <div>
+                        <p class="font-semibold text-royal-900 mb-4">Follow Us</p>
+                        <div class="flex gap-3">
+                            <a href="https://instagram.com/royalyorkies" target="_blank" class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://facebook.com/royalyorkies" target="_blank" class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://youtube.com/royalyorkies" target="_blank" class="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                                <i data-lucide="youtube" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://tiktok.com/@royalyorkies" target="_blank" class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                                <i data-lucide="music" class="w-5 h-5"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gold-400/10">
-                    <form id="contactForm" class="space-y-6" onsubmit="handleContactSubmit(event)">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-royal-700 mb-2">First Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-royal-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 outline-none transition-all bg-royal-50/50" placeholder="John">
+                <div class="reveal">
+                    <div class="bg-royal-50 rounded-3xl p-8 lg:p-10 border border-royal-100">
+                        <h3 class="font-serif text-2xl font-bold text-royal-900 mb-6">Send Us a Message</h3>
+                        
+                        <form id="contactForm" onsubmit="sendToWhatsApp(event)">
+                            <div class="space-y-5">
+                                <div>
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" id="formName" class="form-input" placeholder="John Doe" required>
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="form-label">Email</label>
+                                        <input type="email" id="formEmail" class="form-input" placeholder="john@example.com" required>
+                                    </div>
+                                    <div>
+                                        <label class="form-label">Phone</label>
+                                        <input type="tel" id="formPhone" class="form-input" placeholder="+1 234 567 890" required>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Country</label>
+                                    <input type="text" id="formCountry" class="form-input" placeholder="United States" required>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Interested In</label>
+                                    <select id="formInterest" class="form-input" required>
+                                        <option value="">Select an option</option>
+                                        <option value="Princess Bella">Princess Bella - $600</option>
+                                        <option value="Duke Maximus">Duke Maximus - $800</option>
+                                        <option value="Lady Aurora">Lady Aurora - $500 (Reserved)</option>
+                                        <option value="Prince Oliver">Prince Oliver - $600</option>
+                                        <option value="Duchess Luna">Duchess Luna - $500</option>
+                                        <option value="King Leo">King Leo - $600</option>
+                                        <option value="Future Litter">Future Litter / Waitlist</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Message</label>
+                                    <textarea id="formMessage" rows="4" class="form-input resize-none" placeholder="Tell us about your ideal puppy, your home, and any questions you have..." required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-gradient-to-r from-gold-400 to-gold-600 text-white py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="w-5 h-5"></i>
+                                    Send via WhatsApp
+                                </button>
+                                
+                                <p class="text-xs text-gray-500 text-center">Your message will be sent directly to our WhatsApp. We typically respond within 1-2 hours.</p>
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium text-royal-700 mb-2">Last Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-royal-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 outline-none transition-all bg-royal-50/50" placeholder="Doe">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-royal-700 mb-2">Email Address</label>
-                            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-royal-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 outline-none transition-all bg-royal-50/50" placeholder="john@example.com">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-royal-700 mb-2">Phone Number</label>
-                            <input type="tel" class="w-full px-4 py-3 rounded-xl border border-royal-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 outline-none transition-all bg-royal-50/50" placeholder="+1 (555) 000-0000">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-royal-700 mb-2">Interested Puppy</label>
-                            <select class="w-full px-4 py-3 rounded-xl border border-royal-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 outline-none transition-all bg-royal-50/50">
-                                <option>Select a puppy...</option>
-                                <option>Prince - Male, 12 weeks</option>
-                                <option>Maximus - Male, 14 weeks</option>
-                                <option>Any Available Puppy</option>
-                                <option>Future Litter</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-royal-700 mb-2">Message</label>
-                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-royal-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 outline-none transition-all bg-royal-50/50 resize-none" placeholder="Tell us about your ideal companion..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-royal-900 to-royal-800 text-white rounded-xl font-bold hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="send" class="w-5 h-5"></i>
-                            Send Message
-                        </button>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-royal-900 text-white pt-20 pb-8">
+    <footer class="bg-royal-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12 mb-16">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-3">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-lg">🐾</div>
-                        <span class="font-serif text-2xl font-bold tracking-wide">Royal Yorkies</span>
+                        <div>
+                            <h3 class="font-serif text-lg font-bold tracking-wide">ROYAL YORKIES</h3>
+                            <p class="text-[10px] text-gold-400 tracking-[0.3em] uppercase">Est. 2009</p>
+                        </div>
                     </div>
-                    <p class="text-royal-300 text-sm leading-relaxed">Premium Yorkshire Terrier breeder dedicated to excellence, health, and bringing joy to families worldwide since 2009.</p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold-400 hover:text-royal-900 transition-all">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                    <p class="text-royal-200 text-sm leading-relaxed mb-6">Premium Yorkshire Terrier breeder dedicated to excellence, ethics, and the perfect match between puppy and family.</p>
+                    <div class="flex gap-3">
+                        <a href="https://instagram.com/royalyorkies" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold-400 hover:text-royal-900 transition-all">
-                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        <a href="https://facebook.com/royalyorkies" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold-400 hover:text-royal-900 transition-all">
-                            <i data-lucide="youtube" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold-400 hover:text-royal-900 transition-all">
-                            <i data-lucide="video" class="w-5 h-5"></i>
+                        <a href="https://youtube.com/royalyorkies" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 transition-colors">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="font-serif text-lg font-bold mb-6 text-gold-400">Quick Links</h4>
+                    <h4 class="font-serif text-lg font-bold mb-6">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#home" class="text-royal-300 hover:text-white transition-colors text-sm">Home</a></li>
-                        <li><a href="#about" class="text-royal-300 hover:text-white transition-colors text-sm">About Us</a></li>
-                        <li><a href="#puppies" class="text-royal-300 hover:text-white transition-colors text-sm">Available Puppies</a></li>
-                        <li><a href="#gallery" class="text-royal-300 hover:text-white transition-colors text-sm">Gallery</a></li>
-                        <li><a href="#shipping" class="text-royal-300 hover:text-white transition-colors text-sm">Shipping</a></li>
+                        <li><a href="#home" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Home</a></li>
+                        <li><a href="#about" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">About Us</a></li>
+                        <li><a href="#puppies" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Available Puppies</a></li>
+                        <li><a href="#services" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Services</a></li>
+                        <li><a href="#gallery" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Gallery</a></li>
+                        <li><a href="#contact" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-serif text-lg font-bold mb-6 text-gold-400">Services</h4>
+                    <h4 class="font-serif text-lg font-bold mb-6">Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-royal-300 hover:text-white transition-colors text-sm">AKC Registration</a></li>
-                        <li><a href="#" class="text-royal-300 hover:text-white transition-colors text-sm">Health Guarantee</a></li>
-                        <li><a href="#" class="text-royal-300 hover:text-white transition-colors text-sm">Worldwide Shipping</a></li>
-                        <li><a href="#" class="text-royal-300 hover:text-white transition-colors text-sm">Lifetime Support</a></li>
-                        <li><a href="#" class="text-royal-300 hover:text-white transition-colors text-sm">Video Calls</a></li>
+                        <li><a href="#services" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Worldwide Shipping</a></li>
+                        <li><a href="#services" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Health Guarantee</a></li>
+                        <li><a href="#services" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Puppy Training</a></li>
+                        <li><a href="#services" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Lifetime Support</a></li>
+                        <li><a href="#" class="text-royal-200 hover:text-gold-400 transition-colors text-sm">Stud Services</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-serif text-lg font-bold mb-6 text-gold-400">Newsletter</h4>
-                    <p class="text-royal-300 text-sm mb-4">Subscribe for new litter announcements and exclusive offers.</p>
-                    <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-royal-400 text-sm outline-none focus:border-gold-400 transition-all">
-                        <button type="submit" class="px-4 py-2 bg-gold-500 text-royal-900 rounded-lg font-semibold hover:bg-gold-400 transition-colors">
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                    </form>
+                    <h4 class="font-serif text-lg font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-royal-200 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>
+                            Beverly Hills, Los Angeles, CA 90210
+                        </li>
+                        <li>
+                            <a href="tel:+1234567890" class="flex items-center gap-3 text-royal-200 hover:text-gold-400 transition-colors text-sm">
+                                <i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>
+                                ++44 7951 892125
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@royalyorkies.com" class="flex items-center gap-3 text-royal-200 hover:text-gold-400 transition-colors text-sm">
+                                <i data-lucide="mail" class="w-4 h-4 text-gold-400"></i>
+                                yorkiepuppyhome1@gmail.com
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3 text-royal-200 text-sm">
+                            <i data-lucide="clock" class="w-4 h-4 text-gold-400"></i>
+                            Always available.
+                        </li>
+                    </ul>
                 </div>
             </div>
             
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-royal-400 text-sm"> 2026 Royal Yorkies. All rights reserved.</p>
+                <p class="text-royal-300 text-sm"> 2026 Royal Yorkies. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a href="#" class="text-royal-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-royal-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-                    <a href="#" class="text-royal-400 hover:text-white text-sm transition-colors">Health Guarantee</a>
+                    <a href="#" class="text-royal-300 hover:text-gold-400 transition-colors text-sm">Privacy Policy</a>
+                    <a href="#" class="text-royal-300 hover:text-gold-400 transition-colors text-sm">Terms of Service</a>
+                    <a href="#" class="text-royal-300 hover:text-gold-400 transition-colors text-sm">Health Guarantee</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- ==================== PROFESSIONAL CHAT SYSTEM ==================== -->
-    
-    <!-- Welcome Popup (Appears after 10 seconds) -->
-    <div class="popup-overlay" id="welcomeOverlay" onclick="closeWelcomePopup()"></div>
-    <div class="welcome-popup" id="welcomePopup">
-        <div class="relative z-10">
-            <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-4xl shadow-xl animate-float">
-                🐾
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-royal-900 mb-3">Welcome to Royal Yorkies!</h3>
-            <p class="text-royal-600 mb-2 leading-relaxed">
-                Are you ready to take a precious Yorkie home? 
-            </p>
-            <p class="text-royal-500 text-sm mb-8 italic">
-                "Our puppies are raised with love, ready to fill your home with joy and companionship."
-            </p>
-            
-            <div class="space-y-3">
-                <button onclick="startChatFromPopup()" class="w-full py-4 bg-gradient-to-r from-royal-900 to-royal-800 text-white rounded-2xl font-bold hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i>
-                    Yes, Let's Chat!
-                </button>
-                <button onclick="closeWelcomePopup()" class="w-full py-3 border-2 border-royal-200 text-royal-600 rounded-2xl font-semibold hover:border-gold-400 hover:text-gold-600 transition-all">
-                    Maybe Later
-                </button>
-            </div>
-            
-            <div class="mt-6 flex items-center justify-center gap-2 text-xs text-royal-400">
-                <span class="status-online"></span>
-                <span>We are online and ready to help</span>
-            </div>
-        </div>
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'm%20interested%20in%20your%20Yorkie%20puppies!" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"/><path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"/><path d="M9.5 15.5a5 5 0 0 0 5 0"/></svg>
+        </a>
     </div>
 
     <!-- Chat Widget -->
-    <div class="chat-widget-container no-print">
-        <!-- Chat Window -->
+    <div class="chat-widget-container">
         <div class="chat-window" id="chatWindow">
             <div class="chat-header">
-                <div class="relative z-10 flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                        <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" class="w-12 h-12 rounded-full border-2 border-gold-400 object-cover" alt="Support Agent">
-                            <div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white"></div>
-                        </div>
-                        <div>
-                            <p class="font-bold text-sm">Royal Concierge</p>
-                            <div class="flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-                                <p class="text-xs text-gold-400">Online Now</p>
-                            </div>
-                        </div>
+                <div class="relative z-10 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                        <span class="text-xl">🐾</span>
                     </div>
-                    <button onclick="toggleChat()" class="text-white/70 hover:text-white transition-colors p-1 hover:bg-white/10 rounded-lg">
+                    <div>
+                        <h4 class="font-semibold">Royal Yorkies</h4>
+                        <p class="text-xs text-white/70 flex items-center gap-1">
+                            <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                            Typically replies in minutes
+                        </p>
+                    </div>
+                    <button onclick="toggleChat()" class="ml-auto text-white/70 hover:text-white transition-colors">
                         <i data-lucide="x" class="w-5 h-5"></i>
                     </button>
                 </div>
             </div>
-            
             <div class="chat-body" id="chatBody">
-                <div class="text-center py-4">
-                    <p class="text-xs text-royal-400 uppercase tracking-wider">Today</p>
-                </div>
-                
                 <div class="chat-message agent">
-                    <p class="font-semibold text-xs text-gold-500 mb-1">Royal Concierge</p>
-                    <p>Hello! Welcome to Royal Yorkies 🐾 I'm here to help you find your perfect companion. How can I assist you today?</p>
-                    <p class="text-[10px] text-royal-400 mt-1.5 text-right">Just now</p>
+                    <p>👋 Welcome to Royal Yorkies! How can we help you find your perfect Yorkie companion today?</p>
                 </div>
             </div>
-            
             <div class="chat-input-area">
                 <input type="text" id="chatInput" class="chat-input" placeholder="Type your message..." onkeypress="handleChatKeypress(event)">
-                <button onclick="sendMessage()" class="chat-send-btn">
+                <button onclick="sendChatMessage()" class="chat-send-btn">
                     <i data-lucide="send" class="w-4 h-4"></i>
                 </button>
             </div>
         </div>
         
-        <!-- Chat Bubble Button -->
-        <div class="chat-bubble-btn pulse-ring" id="chatBubble" onclick="toggleChat()">
-            <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
-            <div class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-2 border-white flex items-center justify-center">
-                <span class="text-[10px] text-white font-bold" id="unreadCount">1</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- WhatsApp Float Button -->
-    <div class="whatsapp-float no-print">
-        <a href="https://wa.me/+44 7951892125" target="_blank" class="whatsapp-btn">
-            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-        </a>
-    </div>
-
-    <!-- Take Me Home Floating Button -->
-    <div class="take-me-home" id="takeMeHome">
-        <button onclick="scrollToContact()" class="take-me-home-btn">
-            <i data-lucide="heart" class="w-5 h-5 fill-current"></i>
-            <span>Take Me Home</span>
+        <button onclick="toggleChat()" class="chat-bubble-btn pulse-ring" id="chatBubble">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </button>
     </div>
 
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightboxImg" src="" alt="Full size">
+        <button class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors" onclick="closeLightbox()">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+    </div>
 
-        // Loading Screen
+    <!-- Take Me Home Button -->
+    <div class="take-me-home" id="takeMeHome">
+        <a href="https://wa.me/1234567890?text=Hi%20Royal%20Yorkies,%20I'm%20ready%20to%20take%20my%20puppy%20home!" target="_blank" class="take-me-home-btn">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+            Take Me Home
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Loader
         window.addEventListener('load', () => {
             setTimeout(() => {
-                const loader = document.getElementById('loader');
-                gsap.to(loader, {
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power2.inOut",
-                    onComplete: () => {
-                        loader.style.display = 'none';
-                        initParticles();
-                        startWelcomeTimer();
-                    }
-                });
+                document.getElementById('loader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                    showWelcomePopup();
+                }, 500);
             }, 1500);
         });
-
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
+        
+        // Welcome Popup
+        function showWelcomePopup() {
+            if (!sessionStorage.getItem('welcomeShown')) {
+                document.getElementById('popupOverlay').classList.add('show');
+                document.getElementById('welcomePopup').classList.add('show');
+                sessionStorage.setItem('welcomeShown', 'true');
+            }
+        }
+        
+        function closeWelcomePopup() {
+            document.getElementById('popupOverlay').classList.remove('show');
+            document.getElementById('welcomePopup').classList.remove('show');
+        }
+        
+        // Navbar scroll effect
         window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('bg-white/95', 'backdrop-blur-lg', 'shadow-lg');
+                navbar.classList.remove('bg-transparent');
             } else {
                 navbar.classList.remove('bg-white/95', 'backdrop-blur-lg', 'shadow-lg');
+                navbar.classList.add('bg-transparent');
             }
             
-            // Show/hide Take Me Home button
+            // Take me home button
             const takeMeHome = document.getElementById('takeMeHome');
-            if (window.scrollY > 600) {
+            if (window.scrollY > 800) {
                 takeMeHome.classList.add('visible');
             } else {
                 takeMeHome.classList.remove('visible');
             }
         });
-
-        // Mobile Menu
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Particles
-        function initParticles() {
-            const canvas = document.getElementById('particles-canvas');
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-
-            const particles = [];
-            const particleCount = 50;
-
-            for (let i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    size: Math.random() * 3 + 1,
-                    speedX: Math.random() * 0.5 - 0.25,
-                    speedY: Math.random() * 0.5 - 0.25,
-                    opacity: Math.random() * 0.5 + 0.1
-                });
-            }
-
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                particles.forEach(p => {
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(212, 175, 55, ${p.opacity})`;
-                    ctx.fill();
-                    
-                    p.x += p.speedX;
-                    p.y += p.speedY;
-                    
-                    if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
-                    if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
-                });
-                
-                requestAnimationFrame(animate);
-            }
-            animate();
-
-            window.addEventListener('resize', () => {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            });
-        }
-
-        // Custom Cursor
-        const cursorDot = document.querySelector('.cursor-dot');
-        const cursorOutline = document.querySelector('.cursor-outline');
-
-        window.addEventListener('mousemove', (e) => {
-            const posX = e.clientX;
-            const posY = e.clientY;
-
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
+        
+        // Mobile menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
         });
-
-        // GSAP Scroll Animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray('section').forEach(section => {
-            gsap.from(section.querySelectorAll('h2, p, .gallery-item, .grid > div'), {
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                    toggleActions: "play none none reverse"
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('mobileMenu').classList.add('hidden');
                 }
             });
         });
-
-        // ==================== CHAT SYSTEM ====================
-
+        
+        // Reveal on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        // Counter animation
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.dataset.target);
+                    let current = 0;
+                    const increment = target / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = target + (target >= 100 ? '+' : '');
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current);
+                        }
+                    }, 30);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.counter-value').forEach(counter => counterObserver.observe(counter));
+        
+        // Lightbox
+        function openLightbox(src) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Chat Widget
         let chatOpen = false;
-        let welcomeShown = false;
-        let unreadMessages = 1;
-
+        
         function toggleChat() {
-            const chatWindow = document.getElementById('chatWindow');
-            const chatBubble = document.getElementById('chatBubble');
             chatOpen = !chatOpen;
-            
+            const window = document.getElementById('chatWindow');
+            const bubble = document.getElementById('chatBubble');
             if (chatOpen) {
-                chatWindow.classList.add('open');
-                chatBubble.classList.remove('pulse-ring');
-                unreadMessages = 0;
-                document.getElementById('unreadCount').style.display = 'none';
-                setTimeout(() => document.getElementById('chatInput').focus(), 300);
+                window.classList.add('open');
+                bubble.classList.remove('pulse-ring');
             } else {
-                chatWindow.classList.remove('open');
+                window.classList.remove('open');
             }
         }
-
-        function startWelcomeTimer() {
-            setTimeout(() => {
-                if (!welcomeShown && !chatOpen) {
-                    showWelcomePopup();
-                }
-            }, 10000); // 10 seconds
+        
+        function openChat() {
+            chatOpen = true;
+            document.getElementById('chatWindow').classList.add('open');
+            document.getElementById('chatBubble').classList.remove('pulse-ring');
         }
-
-        function showWelcomePopup() {
-            document.getElementById('welcomeOverlay').classList.add('show');
-            document.getElementById('welcomePopup').classList.add('show');
-            welcomeShown = true;
-        }
-
-        function closeWelcomePopup() {
-            document.getElementById('welcomeOverlay').classList.remove('show');
-            document.getElementById('welcomePopup').classList.remove('show');
-        }
-
-        function startChatFromPopup() {
-            closeWelcomePopup();
-            toggleChat();
-        }
-
-        function handleChatKeypress(e) {
-            if (e.key === 'Enter') sendMessage();
-        }
-
-        function sendMessage() {
+        
+        function sendChatMessage() {
             const input = document.getElementById('chatInput');
+            const body = document.getElementById('chatBody');
             const message = input.value.trim();
+            
             if (!message) return;
-
-            const chatBody = document.getElementById('chatBody');
-            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-            // User Message
+            
+            // User message
             const userMsg = document.createElement('div');
             userMsg.className = 'chat-message user';
-            userMsg.innerHTML = `
-                <p>${escapeHtml(message)}</p>
-                <p class="text-[10px] text-white/70 mt-1.5 text-right">${time}</p>
-            `;
-            chatBody.appendChild(userMsg);
+            userMsg.innerHTML = `<p>${escapeHtml(message)}</p>`;
+            body.appendChild(userMsg);
+            
             input.value = '';
-            chatBody.scrollTop = chatBody.scrollHeight;
-
-            // Show typing indicator
-            showTypingIndicator();
-
-            // Simulate agent response after delay
-            setTimeout(() => {
-                removeTypingIndicator();
-                respondToMessage(message);
-            }, 1500 + Math.random() * 1000);
-        }
-
-        function showTypingIndicator() {
-            const chatBody = document.getElementById('chatBody');
+            body.scrollTop = body.scrollHeight;
+            
+            // Typing indicator
             const typing = document.createElement('div');
             typing.className = 'typing-indicator';
-            typing.id = 'typingIndicator';
             typing.innerHTML = '<span></span><span></span><span></span>';
-            chatBody.appendChild(typing);
-            chatBody.scrollTop = chatBody.scrollHeight;
-        }
-
-        function removeTypingIndicator() {
-            const typing = document.getElementById('typingIndicator');
-            if (typing) typing.remove();
-        }
-
-        function respondToMessage(userMessage) {
-            const chatBody = document.getElementById('chatBody');
-            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            typing.id = 'typingIndicator';
+            body.appendChild(typing);
+            body.scrollTop = body.scrollHeight;
             
-            let response = "Thank you for your message! Our team will get back to you shortly. Would you like to schedule a video call to meet our puppies?";
-            
-            const lowerMsg = userMessage.toLowerCase();
-            if (lowerMsg.includes('price') || lowerMsg.includes('cost') || lowerMsg.includes('how much')) {
-                response = "Our premium Yorkie puppies range from $3,500 to $4,200 depending on size, lineage, and color. Each puppy includes AKC registration, vaccinations, and a 2-year health guarantee. Would you like details on a specific puppy?";
-            } else if (lowerMsg.includes('shipping') || lowerMsg.includes('delivery') || lowerMsg.includes('transport')) {
-                response = "We offer premium worldwide shipping to 150+ countries! Your puppy travels in a climate-controlled cabin with a dedicated handler. Delivery typically takes 24-72 hours. Would you like a shipping quote to your location?";
-            } else if (lowerMsg.includes('prince')) {
-                response = "Prince is a gorgeous 12-week-old male teacup Yorkie weighing 2.4 lbs. He has a champion bloodline and is very playful! Would you like to schedule a video call to meet him?";
-            } else if (lowerMsg.includes('maximus')) {
-                response = "Maximus is a charming 14-week-old standard Yorkie. He's very affectionate and already potty-trained! He's available for $3,500. Shall we arrange a meeting?";
-            } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi') || lowerMsg.includes('hey')) {
-                response = "Hello there! 🐾 Welcome to Royal Yorkies. I'm excited to help you find your perfect furry companion. Are you looking for a specific size or color?";
-            } else if (lowerMsg.includes('available') || lowerMsg.includes('puppy') || lowerMsg.includes('dog')) {
-                response = "We currently have Prince and Maximus available! Both are AKC registered, vaccinated, and ready for their forever homes. Would you like to see more photos or videos?";
-            } else if (lowerMsg.includes('contact') || lowerMsg.includes('call') || lowerMsg.includes('whatsapp')) {
-                response = "You can reach us directly on WhatsApp at +1 (234) 567-890 for instant replies, or continue chatting here. We also offer video calls so you can meet your puppy virtually!";
-            } else if (lowerMsg.includes('health') || lowerMsg.includes('guarantee') || lowerMsg.includes('vet')) {
-                response = "Every Royal Yorkie comes with a comprehensive 2-year health guarantee covering genetic conditions. They receive full veterinary checks, vaccinations, and microchipping before travel. Your peace of mind is our priority.";
-            }
-
-            const agentMsg = document.createElement('div');
-            agentMsg.className = 'chat-message agent';
-            agentMsg.innerHTML = `
-                <p class="font-semibold text-xs text-gold-500 mb-1">Royal Concierge</p>
-                <p>${response}</p>
-                <p class="text-[10px] text-royal-400 mt-1.5 text-right">${time}</p>
-            `;
-            chatBody.appendChild(agentMsg);
-            chatBody.scrollTop = chatBody.scrollHeight;
-
-            // Play subtle notification sound (optional - using visual feedback instead for UX)
-            if (!chatOpen) {
-                unreadMessages++;
-                document.getElementById('unreadCount').textContent = unreadMessages;
-                document.getElementById('unreadCount').style.display = 'flex';
-                document.getElementById('chatBubble').classList.add('pulse-ring');
-            }
-        }
-
-        function openChatWithMessage(message) {
-            if (!chatOpen) toggleChat();
+            // Auto-reply
             setTimeout(() => {
-                document.getElementById('chatInput').value = message;
-                sendMessage();
-            }, 500);
+                document.getElementById('typingIndicator').remove();
+                
+                const replies = [
+                    "Thank you for your interest! We'd love to help you find your perfect Yorkie. Which puppy caught your eye?",
+                    "Our puppies come with a full health guarantee, vaccinations, and worldwide shipping. Would you like to schedule a video call?",
+                    "You can also reach us directly on WhatsApp at +1 (234) 567-890 for faster responses!",
+                    "We have new litters arriving monthly. Would you like to join our VIP waitlist?",
+                    "All our puppies are AKC registered and raised in our home with 24/7 care. What questions do you have?"
+                ];
+                
+                const reply = replies[Math.floor(Math.random() * replies.length)];
+                
+                const agentMsg = document.createElement('div');
+                agentMsg.className = 'chat-message agent';
+                agentMsg.innerHTML = `<p>${reply}</p>`;
+                body.appendChild(agentMsg);
+                body.scrollTop = body.scrollHeight;
+            }, 1500);
         }
-
+        
+        function handleChatKeypress(e) {
+            if (e.key === 'Enter') sendChatMessage();
+        }
+        
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
         }
-
-        // ==================== LIGHTBOX ====================
-        function openLightbox(element) {
-            const img = element.querySelector('img');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = img.src;
-            lightbox.classList.add('active');
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-        }
-
-        // ==================== CONTACT FORM ====================
-        function handleContactSubmit(e) {
+        
+        // Contact Form - Send to WhatsApp
+        function sendToWhatsApp(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will contact you within 24 hours.');
-            document.getElementById('contactForm').reset();
+            
+            const name = document.getElementById('formName').value;
+            const email = document.getElementById('formEmail').value;
+            const phone = document.getElementById('formPhone').value;
+            const country = document.getElementById('formCountry').value;
+            const interest = document.getElementById('formInterest').value;
+            const message = document.getElementById('formMessage').value;
+            
+            const text = `*New Inquiry from RoyalYorkies.com*%0A%0A` +
+                `*Name:* ${name}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Phone:* ${phone}%0A` +
+                `*Country:* ${country}%0A` +
+                `*Interested In:* ${interest}%0A%0A` +
+                `*Message:*%0A${message}%0A%0A` +
+                `Sent from: https://www.royalyorkies.com`;
+            
+            // UPDATE YOUR WHATSAPP NUMBER HERE
+            const whatsappNumber = '1234567890'; // <-- CHANGE THIS TO YOUR REAL NUMBER (no +, no spaces)
+            
+            window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
         }
-
-        // ==================== TAKE ME HOME ====================
-        function scrollToContact() {
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        
+        // Particles Canvas
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
         }
-
-        // Keyboard shortcuts
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeLightbox();
-                closeWelcomePopup();
-                if (chatOpen) toggleChat();
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.5 + 0.1;
             }
+            
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            
+            draw() {
+                ctx.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < 50; i++) {
+                particles.push(new Particle());
+            }
+        }
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        
+        initParticles();
+        animateParticles();
+        
+        // Custom cursor
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: 'forwards' });
+        });
+        
+        // Hover effects for cursor
+        document.querySelectorAll('a, button, .gallery-item, .puppy-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorOutline.style.width = '50px';
+                cursorOutline.style.height = '50px';
+                cursorOutline.style.backgroundColor = 'rgba(212, 175, 55, 0.1)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorOutline.style.width = '30px';
+                cursorOutline.style.height = '30px';
+                cursorOutline.style.backgroundColor = 'transparent';
+            });
         });
     </script>
 </body>
